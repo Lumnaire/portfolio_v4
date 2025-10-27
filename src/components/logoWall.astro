@@ -1,7 +1,6 @@
 ---
 const technologies = [
   "astro",
-  "vue",
   "react",
   "typeScript",
   "tailwindcss",
@@ -12,8 +11,12 @@ const technologies = [
   "javaScript",
   "git",
   "supabase",
+  "php",
+  "laravel",
   "mysql",
-  "bash",
+  "vercel",
+  "appwrite",
+  "docker",
 ];
 ---
 
@@ -30,7 +33,7 @@ const technologies = [
   <div class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max">
     {
       [...technologies, ...technologies, ...technologies].map((tech) => (
-        <div class="flex items-center gap-2 group transition-all duration-300">
+        <div class="flex items-center gap-2 group transition-all duration-400">
           <img
             src={`/svg/${tech}.svg`}
             alt={tech}
