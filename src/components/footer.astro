@@ -1,10 +1,7 @@
----
-import LikeButton from "../React/LikeButton.tsx";
----
-
 <footer class="w-full py-12 border-t border-[#ffffff10]">
   <div class="max-w-5xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
+      <!-- Social Links -->
       <div class="flex flex-col lg:items-start items-center space-y-6 gap-9">
         <div class="flex space-x-6 sm:space-x-8">
           {
@@ -40,6 +37,7 @@ import LikeButton from "../React/LikeButton.tsx";
         </div>
       </div>
 
+      <!-- Tech Stack -->
       <div class="flex flex-col items-center space-y-6">
         <div class="grid grid-cols-1 gap-3 w-full max-w-xs py-6">
           {
@@ -82,6 +80,7 @@ import LikeButton from "../React/LikeButton.tsx";
         </div>
       </div>
 
+      <!-- Spotify Playlist -->
       <div class="flex flex-col items-center lg:items-start space-y-6">
         <div class="w-full max-w-xs">
           <iframe
@@ -95,14 +94,21 @@ import LikeButton from "../React/LikeButton.tsx";
       </div>
     </div>
 
+    <!-- Copyright with Dynamic Year -->
     <div class="mt-12 pt-8 border-t border-[#ffffff10]">
-      <p class="text-center text-sm text-[var(--white-icon)] space-y-2">
-        <span class="block sm:inline"
-          >Copyright © 2025 <a href="https://github.com/Lumnaire"
-            >Ronald Castromero</a
-          >. All rights reserved.</span
-        >
+      <p class="text-center text-sm text-[var(--white-icon)]">
+        <span class="block sm:inline">
+          © <span id="current-year">2025</span>
+          <a href="https://github.com/Lumnaire">Ronald Castromero</a>. All
+          rights reserved.
+        </span>
       </p>
     </div>
   </div>
 </footer>
+
+<!-- Auto-update current year -->
+<script is:inline>
+  document.getElementById("current-year").textContent =
+    new Date().getFullYear();
+</script>
